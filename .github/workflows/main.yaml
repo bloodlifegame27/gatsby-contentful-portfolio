@@ -32,5 +32,5 @@ jobs:
         space_id: ${{ secrets.CONTENTFUL_SPACE_ID }}
       run: |
         echo "Hello"
-        echo ${space_id}
+        echo $space_id
         ls -la
