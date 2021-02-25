@@ -36,6 +36,6 @@ jobs:
         echo "Hello"
         sed -i 's/SED_SPACE_ID/'${SPACE_ID}'/g' .env
         sed -i 's/SED_ACESS_TOKEN/'${ACCESS_TOKEN}'/g' .env
-        gatsby build
+        sudo gatsby build
         ls -la
         cat .env
