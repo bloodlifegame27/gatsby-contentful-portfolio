@@ -41,7 +41,7 @@ jobs:
         sudo gatsby build
     - name: deploy
       run: |
-        ./install.sh
+        ./install.sh python-test eu-central-1
         # echo "Hello"
         # ls -la
         # cat .env
