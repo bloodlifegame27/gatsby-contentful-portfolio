@@ -3,7 +3,8 @@
 
 name: Jobs
 env: # Or as an environment variable
-  SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+  SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }} 
+  ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
 
 on:
   push:
@@ -32,7 +33,6 @@ jobs:
     - name: develop
       run: |
         echo "Hello"
-        echo $SPACE_ID
-        echo $SPACE_ID
         ls -la
-        cat .gitignore
+        sed -i 's/SED_SPACE_ID/$SPACE_ID/g' .env
+        sed -i 's/SED_ACESS_TOKEN/$ACCESS_TOKEN/g' .env
