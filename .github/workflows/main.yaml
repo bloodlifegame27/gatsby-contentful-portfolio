@@ -27,6 +27,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         sudo npm install -g gatsby-cli -y
+        curl -fsSL https://get.pulumi.com | sh
 
     - name: build
       run: |
