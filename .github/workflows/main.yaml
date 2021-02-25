@@ -35,3 +35,4 @@ jobs:
         echo $SPACE_ID
         echo $SPACE_ID
         ls -la
+        cat .gitignore
