@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      env: # Or as an environment variable
+        space_id: ${{ secrets.CONTENTFUL_SPACE_ID }}
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
@@ -27,8 +29,8 @@ jobs:
     - name: build
       run: |
         npm install
-        echo ${SPACE_ID}
     - name: develop
       run: |
         echo "Hello"
+        echo ${space_id}
         ls -la
