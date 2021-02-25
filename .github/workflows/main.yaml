@@ -42,6 +42,9 @@ jobs:
         sudo gatsby build
     - name: deploy
       run: |
+        python3 -m venv /home/runner/work/gatsby-contentful-portfolio/gatsby-contentful-portfolio/venv
+        /home/runner/work/gatsby-contentful-portfolio/gatsby-contentful-portfolio/venv/bin/python -m pip install --upgrade pip setuptools wheel
+        /home/runner/work/gatsby-contentful-portfolio/gatsby-contentful-portfolio/venv/bin/python -m pip install -r requirements.txt
         ./install.sh python-test eu-central-1
         # echo "Hello"
         # ls -la
