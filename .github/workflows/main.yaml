@@ -33,7 +33,8 @@ jobs:
     - name: develop
       run: |
         echo "Hello"
-        ls -la
         sed -i 's/SED_SPACE_ID/'${SPACE_ID}'/g' .env
         sed -i 's/SED_ACESS_TOKEN/'${ACCESS_TOKEN}'/g' .env
+        gatsby build
+        ls -la
         cat .env
