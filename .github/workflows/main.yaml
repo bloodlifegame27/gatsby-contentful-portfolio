@@ -5,7 +5,9 @@ name: Jobs
 
 on:
   push:
-    branches: add_github_actions
+    branches:
+    - main
+    - add_github_actions
 
 jobs:
   build:
