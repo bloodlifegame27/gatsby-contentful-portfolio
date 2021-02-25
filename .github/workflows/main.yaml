@@ -45,7 +45,7 @@ jobs:
         python3 -m venv /home/runner/work/gatsby-contentful-portfolio/gatsby-contentful-portfolio/venv
         /home/runner/work/gatsby-contentful-portfolio/gatsby-contentful-portfolio/venv/bin/python -m pip install --upgrade pip setuptools wheel
         /home/runner/work/gatsby-contentful-portfolio/gatsby-contentful-portfolio/venv/bin/python -m pip install -r requirements.txt
-        ./install.sh python-dev eu-central-1
+        ./install_update.sh python-dev eu-central-1
         # echo "Hello"
         # ls -la
         # cat .env
