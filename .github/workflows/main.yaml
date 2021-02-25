@@ -2,6 +2,8 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
 name: Jobs
+env: # Or as an environment variable
+  SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
 
 on:
   push:
@@ -28,9 +30,7 @@ jobs:
       run: |
         npm install
     - name: develop
-      env: # Or as an environment variable
-        space_id: ${{ secrets.CONTENTFUL_SPACE_ID }}
       run: |
         echo "Hello"
-        echo $space_id
+        echo $SPACE_ID
         ls -la
