@@ -34,6 +34,6 @@ jobs:
       run: |
         echo "Hello"
         ls -la
-        sed -i 's/SED_SPACE_ID/${SPACE_ID}/g' .env
-        sed -i 's/SED_ACESS_TOKEN/${ACCESS_TOKEN}/g' .env
+        sed -i 's/SED_SPACE_ID/'${SPACE_ID}'/g' .env
+        sed -i 's/SED_ACESS_TOKEN/'${ACCESS_TOKEN}'/g' .env
         cat .env
