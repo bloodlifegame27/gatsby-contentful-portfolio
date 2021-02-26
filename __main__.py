@@ -30,7 +30,7 @@ def public_read_policy_for_bucket(bucket_name):
             "Effect": "Allow",
             "Principal": "*",
             "Action": [
-                "s3:*"
+                "s3:GetObject"
             ],
             "Resource": [
                 f"arn:aws:s3:::{bucket_name}/*",
