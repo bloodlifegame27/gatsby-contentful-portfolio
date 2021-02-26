@@ -64,3 +64,13 @@ Run in the project locally.
 #### `gatsby build`
 
 Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
+
+## Pulumi 
+
+From an empty directory in which you’d like to create a new project, you can run command `pulumi new <stack>`.This creates a Pulumi.yaml file, containing minimal metadata about your project (including a name and description, which you may wish to change), a requirements.txt file, where you will specify your dependencies, and a `(__main__.py)` file, containing your program.
+When managing the virtual environment on your own, you’ll need to run any pulumi commands `(such as pulumi up)` from an activated virtual environment shell
+This project comes with a Pulumi setup command `pulumi up`.
+
+## GitHub Actions
+
+Automate, customize, and execute your software development workflows right in your repository with GitHub Actions. File `(./.github/workflows/main.yaml)` install dependencies and run bash scriptings.
