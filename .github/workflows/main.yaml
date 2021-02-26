@@ -38,14 +38,11 @@ jobs:
       run: |
         npm install
         sed -i 's/SED_SPACE_ID/'${SPACE_ID}'/g' .env
-        sed -i 's/SED_ACESS_TOKEN/'${ACCESS_TOKEN}'/g' .env
+        sed -i 's/SED_ACCESS_TOKEN/'${ACCESS_TOKEN}'/g' .env
         sudo gatsby build
     - name: deploy
       run: |
         python3 -m venv /home/runner/work/gatsby-contentful-portfolio/gatsby-contentful-portfolio/venv
         /home/runner/work/gatsby-contentful-portfolio/gatsby-contentful-portfolio/venv/bin/python -m pip install --upgrade pip setuptools wheel
         /home/runner/work/gatsby-contentful-portfolio/gatsby-contentful-portfolio/venv/bin/python -m pip install -r requirements.txt
-        ./install_update.sh python-dev eu-central-1
-        # echo "Hello"
-        # ls -la
-        # cat .env
+        ./install_update.sh release eu-central-1
